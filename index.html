@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Ajedrez — Lector de Partidas</title>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#14120d">
+
+<!-- iOS: modo app a pantalla completa -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ajedrez">
+<link rel="apple-touch-icon" href="icon-180x180.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icon-152x152.png">
+<link rel="apple-touch-icon" sizes="192x192" href="icon-192x192.png">
+
+<link rel="icon" href="icon-96x96.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span id="logoMark"></span>
+    <h1>Ajedrez</h1>
+  </div>
+</header>
+
+<div id="boardWrap">
+  <div id="board"></div>
+  <div id="status"></div>
+</div>
+
+<div id="moveStrip"></div>
+
+<section id="notesSection">
+  <div id="notesLabel">Notas</div>
+  <textarea id="notesArea" placeholder="Escribe tus apuntes sobre esta jugada…" spellcheck="false"></textarea>
+</section>
+
+<div id="controls">
+  <button id="prevBtn" aria-label="Anterior"></button>
+  <button id="nextBtn" aria-label="Siguiente"></button>
+</div>
+
+<!-- Partida de ejemplo cargada al arrancar (la página de inicio para elegir partida llegará después) -->
+<textarea id="pgnInput" style="display:none">1. d4 d5 2. e3 c5 3. c3 e6 4. Bd3 Nc6 5. f4 Nf6 6. Nd2 Qc7 7. Ngf3
+cxd4 8. cxd4 Nb4 9. Bb1 Bd7 10. a3 Rc8 11. O-O Bb5 12. Re1 Nc2
+13. Bxc2 Qxc2 14. Qxc2 Rxc2 15. h3 Bd6 16. Nb1 Ne4 17. Nfd2
+Bd3 18. Nxe4 Bxe4 19. Nd2 Kd7 20. Nxe4 dxe4 21. Rb1 Rhc8 22.
+b4 R8c3 23. Kf1 Kc6 24. Bb2 Rb3 25. Re2 Rxe2 26. Kxe2 Kb5 27.
+Kd2 Ka4 28. Ke2 a5 29. Kf2 axb4 30. axb4 Kxb4 31. Ke2 Kb5 32.
+Kd2 Ba3 33. Kc2 Rxb2+ 34. Rxb2+ Bxb2 35. Kxb2 Kc4 36. g4 Kd3
+37. g5 Kxe3 0-1</textarea>
+
+<script src="pieces.js"></script>
+<script src="icons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
